@@ -1,0 +1,153 @@
+.container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(2, 17, 30);
+}
+.form-container{
+    margin-top: 30px;
+    width: 100%;
+    border-radius: 10px;
+    height: 80vh;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+}
+form input{
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid gray;
+
+}
+form button{
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.add_div{
+    width: 100%;
+    padding:10px 0px 0px 90px;
+}
+.add_div button{
+    padding: 8px;
+    background-color: green;
+    color: white;
+    border-radius: 7px;
+}
+.add_div button:hover{
+    background-color: rgb(2, 58, 2);
+    cursor: pointer;
+}
+table{
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    border: 1px solid black;
+
+}
+.update_form , .create_form{
+    display: none;
+}
+table .edit{
+    background-color: blueviolet;
+    color: white;
+}
+table .delete{
+    background-color: red;
+    color: white;
+}
+.table-heading th{
+    border: 1px solid black;
+}
+.table-data td{
+    border: 1px solid black;
+}
+.badge {
+    background-color:  rgb(2, 17, 30);
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    overflow: scroll;
+  }
+  
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="file"],
+form select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Add animations */
+@keyframes slide-down {
+    from {
+        transform: translateY(-20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

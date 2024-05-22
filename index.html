@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch api</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="fetchtodo()">
+    <div class="container">
+        <div class="form-container">
+            <div class="add_div">
+                <button onclick="ShowAddButton()" id="myBtn">Add +</button>
+            </div>
+            <table>
+                <thead class="table-heading">
+                    <th>id</th>
+                    <th>Category</th>
+                    <th>Content</th>
+                    <th>Image</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </thead>
+                <tbody class="table-data" id="data_table">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" id="close_modal" onclick="close_modal('add')">&times;</span>
+            <p>Some text in the Modal..</p>
+            <form>
+                <label for="Category">Catgeory</label>
+                <input type="text" name="Category" id="Category">
+                <label for="content">Content</label>
+                <input type="text" name="content" id="content">
+                <label for="image">Image</label>
+                <input type="file" name="image" id="image">
+                <label for="status">Status</label>
+                <select name="status" id="status">
+                    <option value="published">Published</option>
+                    <option value="unpublished">UnPublished</option>
+                </select>
+                <button type="button">Add</button>
+            </form>
+        </div>
+    </div>
+    <div id="EditModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" id="close_modal" onclick="close_modal('edit')">&times;</span>
+            <!-- <p>Some text in the Modal..</p> -->
+            <h1>Edit Form</h1>
+            <form id="edit_form">
+                <input type="hidden" name="edit_id" id="edit_id">
+                <label for="Category">Catgeory</label>
+                <input type="text" name="Category" id="EditCategory">
+                <label for="content">Content</label>
+                <!-- <input type="textarea" name="content" id="Editcontent" rows="8" > -->
+                <textarea name="content" id="Editcontent" rows="8" cols="15" ></textarea>
+                <img src="" alt="" id="show_edit_img" height="100px" width="100px">
+                <label for="image">Image</label>
+                <input type="file" name="image" id="Editimage">       
+                <label for="status">Status</label>
+                <select name="status" id="Editstatus">
+                    <!-- <option value="" selected>asd</option> -->
+                    <option value="unpublished" >UnPublished</option>
+                    <option value="published">Published</option>
+                </select>                
+                <button type="button" onclick="update_val()">Update</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+
+</html>
